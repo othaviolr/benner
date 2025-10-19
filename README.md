@@ -38,23 +38,23 @@ A ideia central é simples: um sistema que gerencia o ciclo completo de vendas -
 
 > **Tela de Menu**
 > 
-> ![Tela Menu](Screenshots/menu.png)
+> <img width="635" height="442" alt="menu png" src="https://github.com/user-attachments/assets/5004aabb-018e-4739-a8d8-35230d2b161d" />
 
 > **Cadastro de Pessoa**
 > 
-> ![Cadastrar Pessoa](Screenshots/cadastroPF.gif)
+> ![cadastroPF](https://github.com/user-attachments/assets/22a03a16-a9eb-423f-8ea2-0f225a393443)
 
 > **Cadastrar Produto**
 > 
-> ![Produto](Screenshots/cadastroProduct.gif)
+> ![cadastroProduct](https://github.com/user-attachments/assets/9d20298c-2754-4937-8881-258b4dad18d5)
 
 > **Gerar Pedido**
 > 
-> ![Pedido](Screenshots/gerarPedido.gif)
+> ![gerarPedido](https://github.com/user-attachments/assets/f9c594c0-1418-4072-add7-9c5265c9eb9a)
 
 > **Confirmar Pedido**
 > 
-> ![Confirmar](Screenshots/confirmarPedido.gif)
+> ![confirmarPedido](https://github.com/user-attachments/assets/702f70c7-186d-4682-8a88-075f8b970567)
 
 ---
 
