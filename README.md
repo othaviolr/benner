@@ -128,7 +128,7 @@ Fazer a UI atualizar automaticamente quando os dados mudavam foi outro desafio. 
 
 **1. Clone o repositório**
 ```bash
-git clone https://github.com/seu-usuario/sistema-gestao.git
+git clone https://github.com/othaviolr/sistema-gestao.git
 cd sistema-gestao
 ```
 
@@ -167,11 +167,9 @@ Esse projeto me tirou completamente da zona de conforto. Principais aprendizados
 
 ---
 
-## 📝 Observações Finais
+## 📝 Observações
 
-Esse foi meu primeiro projeto em WPF. Mesmo com os desafios, consegui entregar todas as funcionalidades solicitadas seguindo boas práticas.
-
-Se você clonar e rodar, vai ver que o sistema funciona de ponta a ponta: cadastra, busca, edita, exclui, relaciona dados e persiste tudo corretamente.
+> **Obs:** Atuei como aprendiz administrativo em um hospital, passando pelos setores de **exames**, **auditoria** e **faturamento**. Essa vivência me proporcionou uma compreensão prática de como sistemas bem estruturados impactam diretamente a **eficiência** das operações, especialmente na área da **saúde**, onde **precisão**, **agilidade** e **confiabilidade** fazem toda a diferença.
 
 ---
 
