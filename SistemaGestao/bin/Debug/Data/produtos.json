@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 1,
+    "Nome": "Guitarra Les Paul",
+    "Codigo": "777",
+    "Valor": 27500.0
+  },
+  {
+    "Id": 2,
+    "Nome": "Teclado Razer Blackwidow",
+    "Codigo": "21321",
+    "Valor": 1300.0
+  },
+  {
+    "Id": 3,
+    "Nome": "Mouse Logitech G PRO",
+    "Codigo": "23213",
+    "Valor": 900.0
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "Id": 1,
+    "PessoaId": 1,
+    "DataVenda": "2025-10-19T10:59:35.3091846-03:00",
+    "FormaPagamento": "Dinheiro",
+    "Status": "Enviado",
+    "Itens": [
+      {
+        "ProdutoId": 1,
+        "ProdutoNome": "Guitarra Les Paul",
+        "Quantidade": 1,
+        "ValorUnitario": 27500.0,
+        "Subtotal": 27500.0
+      }
+    ],
+    "ValorTotal": 27500.0
+  },
+  {
+    "Id": 2,
+    "PessoaId": 1,
+    "DataVenda": "2025-10-19T11:52:49.641884-03:00",
+    "FormaPagamento": "Dinheiro",
+    "Status": "Pago",
+    "Itens": [
+      {
+        "ProdutoId": 1,
+        "ProdutoNome": "Guitarra Les Paul",
+        "Quantidade": 1,
+        "ValorUnitario": 27500.0,
+        "Subtotal": 27500.0
+      }
+    ],
+    "ValorTotal": 27500.0
+  },
+  {
+    "Id": 3,
+    "PessoaId": 2,
+    "DataVenda": "2025-10-19T12:14:24.1686494-03:00",
+    "FormaPagamento": "Cartão",
+    "Status": "Pago",
+    "Itens": [
+      {
+        "ProdutoId": 2,
+        "ProdutoNome": "Teclado Razer Blackwidow",
+        "Quantidade": 1,
+        "ValorUnitario": 1300.0,
+        "Subtotal": 1300.0
+      }
+    ],
+    "ValorTotal": 1300.0
+  },
+  {
+    "Id": 4,
+    "PessoaId": 3,
+    "DataVenda": "2025-10-19T12:26:01.6940699-03:00",
+    "FormaPagamento": "Dinheiro",
+    "Status": "Pago",
+    "Itens": [
+      {
+        "ProdutoId": 3,
+        "ProdutoNome": "Mouse Logitech G PRO",
+        "Quantidade": 1,
+        "ValorUnitario": 900.0,
+        "Subtotal": 900.0
+      }
+    ],
+    "ValorTotal": 900.0
+  }
+]

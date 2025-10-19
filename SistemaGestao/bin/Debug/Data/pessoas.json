@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "Nome": "Othavio de Lara Nogueira",
+    "CPF": "11052558917",
+    "Endereco": "Rua Jorge Bom, 680",
+    "Pedidos": []
+  },
+  {
+    "Id": 2,
+    "Nome": "Noah Sebastian",
+    "CPF": "94186634904",
+    "Endereco": "Rua Alberico Flores",
+    "Pedidos": []
+  },
+  {
+    "Id": 3,
+    "Nome": "Teste",
+    "CPF": "94722863997",
+    "Endereco": "Teste",
+    "Pedidos": []
+  }
+]

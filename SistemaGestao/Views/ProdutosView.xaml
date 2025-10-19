@@ -1,0 +1,159 @@
+﻿<Window x:Class="SistemaGestao.Views.ProdutosView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:helpers="clr-namespace:SistemaGestao.Helpers"
+        Title="Cadastro de Produtos" 
+        Height="700" Width="1000"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <helpers:InverseBoolConverter x:Key="BoolToVisibilityConverter"/>
+    </Window.Resources>
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Cabeçalho -->
+        <TextBlock Grid.Row="0" 
+                  Text="CADASTRO DE PRODUTOS" 
+                  FontSize="24" 
+                  FontWeight="Bold" 
+                  Margin="0,0,0,20"/>
+
+        <!-- Filtro-->
+        <GroupBox Grid.Row="1" Header="Filtros" Padding="10" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Nome:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox Width="200" 
+                        Text="{Binding FiltroNome, UpdateSourceTrigger=PropertyChanged}"
+                        Margin="0,0,20,0"/>
+
+                <TextBlock Text="Código:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox Width="150" 
+                        Text="{Binding FiltroCodigo, UpdateSourceTrigger=PropertyChanged}"
+                        Margin="0,0,20,0"/>
+
+                <TextBlock Text="Valor Mín:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox Width="100" 
+                        Text="{Binding FiltroValorMinimo, UpdateSourceTrigger=PropertyChanged}"
+                        Margin="0,0,20,0"/>
+
+                <TextBlock Text="Valor Máx:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBox Width="100" 
+                        Text="{Binding FiltroValorMaximo, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- GRid -->
+        <DataGrid Grid.Row="2" 
+                 ItemsSource="{Binding Produtos}"
+                 SelectedItem="{Binding ProdutoSelecionado}"
+                 AutoGenerateColumns="False"
+                 IsReadOnly="True"
+                 SelectionMode="Single"
+                 CanUserAddRows="False"
+                 AlternatingRowBackground="LightGray">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
+                <DataGridTextColumn Header="Código" Binding="{Binding Codigo}" Width="150"/>
+                <DataGridTextColumn Header="Valor" Binding="{Binding Valor, StringFormat=C}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Ações -->
+        <StackPanel Grid.Row="3" 
+                   Orientation="Horizontal" 
+                   Margin="0,15,0,15">
+            <Button Content="Incluir" 
+                   Width="100" 
+                   Height="35"
+                   Margin="0,0,10,0"
+                   Command="{Binding IncluirCommand}"/>
+
+            <Button Content="Editar" 
+                   Width="100" 
+                   Height="35"
+                   Margin="0,0,10,0"
+                   Command="{Binding EditarCommand}"/>
+
+            <Button Content="Excluir" 
+                   Width="100" 
+                   Height="35"
+                   Command="{Binding ExcluirCommand}"/>
+        </StackPanel>
+
+        <!-- Edição -->
+        <GroupBox Grid.Row="4" 
+                 Header="Dados do Produto" 
+                 Padding="15"
+                 Visibility="{Binding ModoEdicao, Converter={StaticResource BoolToVisibilityConverter}}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Nome -->
+                <TextBlock Grid.Row="0" Grid.Column="0" 
+                          Text="Nome:*" 
+                          VerticalAlignment="Center" 
+                          Margin="0,10"/>
+                <TextBox Grid.Row="0" Grid.Column="1" 
+                        Text="{Binding Nome, UpdateSourceTrigger=PropertyChanged}"
+                        Margin="0,10"
+                        Height="25"/>
+
+                <!-- Cod -->
+                <TextBlock Grid.Row="1" Grid.Column="0" 
+                          Text="Código:*" 
+                          VerticalAlignment="Center" 
+                          Margin="0,10"/>
+                <TextBox Grid.Row="1" Grid.Column="1" 
+                        Text="{Binding Codigo, UpdateSourceTrigger=PropertyChanged}"
+                        Margin="0,10"
+                        Height="25"/>
+
+                <!-- Valor -->
+                <TextBlock Grid.Row="2" Grid.Column="0" 
+                          Text="Valor:*" 
+                          VerticalAlignment="Center" 
+                          Margin="0,10"/>
+                <TextBox Grid.Row="2" Grid.Column="1" 
+                        Text="{Binding Valor, UpdateSourceTrigger=PropertyChanged}"
+                        Margin="0,10"
+                        Height="25"/>
+
+                <!-- Save/Cancel -->
+                <StackPanel Grid.Row="3" Grid.Column="1" 
+                           Orientation="Horizontal" 
+                           HorizontalAlignment="Right"
+                           Margin="0,15,0,0">
+                    <Button Content="Salvar" 
+                           Width="100" 
+                           Height="35"
+                           Margin="0,0,10,0"
+                           Command="{Binding SalvarCommand}"/>
+
+                    <Button Content="Cancelar" 
+                           Width="100" 
+                           Height="35"
+                           Command="{Binding CancelarCommand}"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
